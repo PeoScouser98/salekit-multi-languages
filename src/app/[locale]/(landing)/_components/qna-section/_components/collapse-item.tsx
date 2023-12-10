@@ -15,9 +15,9 @@ export default function CollapseItem({ data }: { data: TQnAItem }) {
 			as={'div'}
 			className='overflow-hidden rounded-lg border border-l-4 border-gray-200 border-l-primary outline-none'>
 			<>
-				<Disclosure.Button className='z-10 flex w-full items-center justify-between border-none p-6 text-left text-gray-800 outline-none focus:border-none'>
-					<p className='font-semibold'>{t(data.question)}</p>
-					<ChevronDownIcon className='h-4 w-4 transform font-medium text-base-content duration-300 ease-in-out ui-open:-rotate-180' />
+				<Disclosure.Button className='z-10 flex w-full flex-grow items-center justify-between border-none p-6 text-left text-gray-800 outline-none focus:border-none sm:px-3'>
+					<p className='flex-1 font-semibold'>{t(data.question)}</p>
+					<ChevronDownIcon className='h-4 w-4 basis-1/12 transform font-medium text-base-content duration-300 ease-in-out ui-open:-rotate-180' />
 				</Disclosure.Button>
 				<Transition
 					className='-translate-y-2 overflow-hidden'

@@ -12,7 +12,7 @@ export default function TemplateStoreSection() {
 	const t = useTranslations('landing_ns');
 
 	return (
-		<Box className='mx-auto max-w-7xl px-6 py-20'>
+		<Box className='mx-auto max-w-7xl px-6 py-20 sm:px-3'>
 			<Typography variant='heading3' className='mb-6 text-center text-primary'>
 				{t('free_template_section.title1')}
 			</Typography>

@@ -31,12 +31,16 @@ export default function TemplateFeaturePanel() {
 	const t = useTranslations('landing_ns');
 
 	return (
-		<Box className='flex gap-10 sm:flex-col-reverse md:flex-col-reverse'>
+		<Box className='mx-auto flex max-w-full gap-10 sm:flex-col-reverse md:flex-col-reverse'>
 			<List>
 				{features.map((item, index) => (
 					<ListItem key={index}>
-						<Image src={item.icon} alt='feature' className='max-w-[6rem] self-center sm:max-w-full' />
-						<Box className='flex flex-col space-y-3'>
+						<Image
+							src={item.icon}
+							alt='feature'
+							className='max-w-[6rem] basis-[10%] self-center sm:max-w-[3rem] sm:self-start'
+						/>
+						<Box className='flex w-full flex-col space-y-3 sm:space-y-1'>
 							<Typography variant='heading6' className='text-white'>
 								{t(item.title)}
 							</Typography>
@@ -50,6 +54,6 @@ export default function TemplateFeaturePanel() {
 	);
 }
 
-const List = tw.ul`flex flex-col gap-y-10 basis-1/2`;
-const ListItem = tw.li`grid grid-cols-[15%_85%] gap-x-6`;
-const Paragraph = tw.p`text-white text-sm`;
+const List = tw.ul`flex flex-col gap-y-10 basis-1/2 w-full`;
+const ListItem = tw.li`flex gap-x-6 sm:gap-x-3 w-full`;
+const Paragraph = tw.span`text-white text-sm`;

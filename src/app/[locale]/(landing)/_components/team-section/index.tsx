@@ -26,11 +26,11 @@ export default function TeamSection() {
 				{/* Background */}
 				<Box className='absolute inset-0 z-0 mx-auto w-[90%]'>
 					<Box
-						className='relative z-10 h-32 w-full rounded-lg bg-gradient-to-r from-emerald-200 to-primary'
+						className='relative z-10 h-32 w-full rounded-lg bg-gradient-to-r from-emerald-200 to-primary sm:h-36'
 						style={{ transform: 'perspective(6rem) rotateX(-4deg)' }}
 					/>
 					<Box
-						className='relative bottom-10 z-0 h-32 w-full rounded-lg bg-gray-100'
+						className='relative bottom-10 z-0 h-32 w-full rounded-lg bg-gray-100 sm:h-32'
 						style={{ transform: 'perspective(10rem) rotateX(8deg)' }}
 					/>
 				</Box>
@@ -39,10 +39,10 @@ export default function TeamSection() {
 					<Typography variant='heading6' className='text-center text-white'>
 						{t('team_section.title')}
 					</Typography>
-					<Box className='grid grid-cols-4 items-stretch gap-x-10 sm:gap-x-4'>
+					<Box className='relative grid grid-cols-4 items-stretch gap-x-10 sm:gap-x-4'>
 						{teams.map((team, index) => (
 							<Box className='flex flex-col items-center space-y-1' key={index}>
-								<Box className='flex h-28 w-28 items-center justify-center rounded-full bg-gray-200 shadow-xl ring-primary sm:h-20 sm:w-20 '>
+								<Box className='flex h-28 w-28 items-center justify-center rounded-full bg-gray-200 shadow-xl ring-primary sm:h-16 sm:w-16 '>
 									<Image
 										src={team.icon}
 										alt={team.name}
@@ -51,7 +51,7 @@ export default function TeamSection() {
 										className='max-w-[4rem] object-contain sm:max-w-[3rem]'
 									/>
 								</Box>
-								<p className='font-medium'>{team.name}</p>
+								<p className='whitespace-nowrap font-medium sm:text-xs'>{team.name}</p>
 							</Box>
 						))}
 					</Box>

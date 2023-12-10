@@ -30,13 +30,13 @@ export default function FeatureSection() {
 	return (
 		<Box
 			as='section'
-			className='flex flex-col space-y-10 px-6 py-20 xl:px-0'
+			className='flex flex-col space-y-10 overflow-hidden px-6 py-20 sm:px-3 xl:px-0'
 			style={{ backgroundImage: `url(${BackgroundImage.src})` }}>
 			<Typography variant='heading4' className='text-center text-white'>
 				{t('features_section.title')}
 			</Typography>
 			<Tab.Group>
-				<Tab.List className='mx-auto grid w-full max-w-7xl grid-cols-4 gap-6 overflow-x-auto scrollbar-none sm:grid-cols-1 sm:gap-3 md:grid-cols-2'>
+				<Tab.List className='mx-auto grid w-full max-w-7xl grid-cols-4 gap-6 overflow-x-auto scrollbar-none sm:max-w-full sm:grid-cols-1 sm:gap-3 md:grid-cols-2'>
 					{tabs.map((tab, index) => (
 						<Tab
 							key={index}
@@ -49,7 +49,7 @@ export default function FeatureSection() {
 				</Tab.List>
 				<Tab.Panels>
 					{tabs.map((tab) => (
-						<Tab.Panel className='mx-auto w-full max-w-7xl'>{tab.panel}</Tab.Panel>
+						<Tab.Panel className='mx-auto w-full max-w-7xl sm:max-w-full'>{tab.panel}</Tab.Panel>
 					))}
 				</Tab.Panels>
 			</Tab.Group>

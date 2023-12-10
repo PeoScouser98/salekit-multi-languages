@@ -18,7 +18,7 @@ declare interface IChartCardProps extends ICardProps, React.PropsWithChildren {
 
 export const GradientCard: React.FC<ICardProps> = (props) => {
 	return (
-		<Box className='flex max-w-xs flex-col gap-4 rounded-lg bg-gradient-to-b from-white to-transparent p-3'>
+		<Box className='flex max-w-xs flex-col gap-4 rounded-lg bg-gradient-to-b from-white to-transparent p-3 sm:w-full sm:max-w-full'>
 			<Typography variant='heading6' className='text-primary'>
 				{props.title}
 			</Typography>
@@ -46,7 +46,7 @@ export const ChartCard: React.FC<IChartCardProps> = (props) => {
 			)}
 			{props.chart && <Image src={props.chart} alt='chart' width={100} height={50} className='opacity-50' />}
 			{props.description && (
-				<Box className='inline-flex gap-3 text-sm text-white'>
+				<Box className='inline-flex gap-3 text-sm text-white sm:flex-col'>
 					{props.description} {props.children}
 				</Box>
 			)}

@@ -52,7 +52,7 @@ export default function PricingSection() {
 	const t = useTranslations('landing_ns');
 
 	return (
-		<Box as='section' className='mx-auto mb-20 flex h-fit max-w-7xl flex-col overflow-hidden p-6'>
+		<Box as='section' className='mx-auto mb-20 flex h-fit max-w-7xl flex-col overflow-hidden px-6 sm:px-3'>
 			<Typography variant='heading3' as='h3' className='text-center text-primary sm:mb-10 md:mb-10'>
 				{t('pricing_section.title')}
 			</Typography>

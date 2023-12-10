@@ -23,7 +23,7 @@ export default function OutstandingSection() {
 	const t = useTranslations('landing_ns');
 
 	return (
-		<Box as='section' className='mx-auto flex max-w-7xl flex-col gap-y-6 px-6 py-20'>
+		<Box as='section' className='mx-auto flex max-w-7xl flex-col gap-y-6 px-6 py-20 sm:px-3'>
 			<Typography variant='heading3' as='h3' className='text-center text-primary'>
 				{t('outstanding_section.title')}
 			</Typography>

@@ -10,7 +10,7 @@ export default function PromotionSection() {
 	const t = useTranslations('landing_ns');
 
 	return (
-		<Box as='section' className='w-full bg-gradient-to-r from-primary to-primary-active px-6 py-20'>
+		<Box as='section' className='w-full bg-gradient-to-r from-primary to-primary-active px-6 py-20 sm:px-3'>
 			<Box className='mx-auto grid max-w-7xl grid-cols-[1fr_3fr] sm:grid-cols-1 sm:gap-10 md:grid-cols-1 md:gap-10 lg:gap-10'>
 				<Box className='flex flex-col justify-between gap-6 sm:items-stretch sm:justify-start md:items-stretch md:justify-start'>
 					<Typography

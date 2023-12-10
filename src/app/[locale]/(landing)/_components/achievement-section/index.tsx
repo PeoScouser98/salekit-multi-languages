@@ -18,17 +18,18 @@ export default function AchievementSection() {
 		<Box as='section' className='from to relative mb-20 bg-gradient-to-b from-primary-active to-primary xl:bg-none'>
 			<Image
 				src={AchievementBannerImage}
+				placeholder='blur'
 				alt='achivement'
 				className='absolute inset-0 z-0 hidden max-h-screen max-w-full object-cover object-bottom xl:block xxl:h-[90vh]'
 			/>
-			<Box className='relative z-10 px-6 py-10'>
+			<Box className='relative z-10 px-6 py-10 sm:px-3'>
 				<Typography as='h3' variant='heading3' className='mb-10 text-center text-white'>
 					{t('achievement_section.title')}
 				</Typography>
 
 				<BrowserMockup
 					url='https://salekit.com'
-					className='absolute bottom-16 left-1/2 z-0 hidden w-full -translate-x-1/3 border-none bg-gradient-to-b from-white to-transparent xl:block xl:max-w-[600px] xxl:max-w-[700px]'>
+					className='absolute bottom-16 left-1/2 z-0 hidden w-full -translate-x-1/3 border-none bg-gradient-to-b from-white to-transparent lg:block lg:max-w-[400px] lg:-translate-x-1/2 xl:block xl:max-w-[600px] xxl:max-w-[700px]'>
 					<Box className='min-h-[20rem] w-[inherit]' />
 				</BrowserMockup>
 
@@ -55,7 +56,7 @@ export default function AchievementSection() {
 					</Box>
 
 					<Box className='flex flex-col items-end justify-between gap-3'>
-						<Box className='relative z-10 grid grid-cols-3 items-stretch justify-end gap-3'>
+						<Box className='relative z-10 grid w-full grid-cols-3 items-stretch justify-end gap-3 sm:grid-cols-1'>
 							<GradientCard title='200%' description={t('achievement_section.stats_1')} />
 							<GradientCard title='10.000+' description={t('achievement_section.stats_2')} />
 							<GradientCard
