@@ -1,6 +1,6 @@
 'use client';
 
-import LocaleLink from '@/components/override/locale-link';
+import Link from '@/components/override/locale-link';
 import { Menu } from '@headlessui/react';
 import CollapseItem from './_components/collapse-item';
 import { Box } from '@/components/ui';
@@ -11,7 +11,7 @@ import { PhotoIcon } from '@heroicons/react/20/solid';
 export declare type TQnAItem = {
 	question: string;
 	answer: string;
-	link: { href: React.ComponentProps<typeof LocaleLink>['href']; text: string };
+	link: { href: React.ComponentProps<typeof Link>['href']; text: string };
 };
 
 const commonQNA: Array<TQnAItem> = [

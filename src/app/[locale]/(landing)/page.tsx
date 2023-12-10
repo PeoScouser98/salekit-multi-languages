@@ -3,7 +3,7 @@ import DevelopmentProcessSection from './_components/development-process-section
 import FeatureSection from './_components/features-section';
 import FreeAppSection from './_components/free-app-section';
 import InclusiveAppendixSection from './_components/inclusive-appendix-section';
-import IntroHeroBanner from './_components/intro-section';
+import IntroSection from './_components/intro-section';
 import OutstandingSection from './_components/outstanding-section';
 import PricingSection from './_components/pricing-section';
 import PromotionSection from './_components/promotion-section';
@@ -15,7 +15,7 @@ import TemplateStoreSection from './_components/template-store-section';
 export default function Home() {
 	return (
 		<main className='flex min-h-screen flex-col items-stretch'>
-			<IntroHeroBanner />
+			<IntroSection />
 			<OutstandingSection />
 			<FeatureSection />
 			<InclusiveAppendixSection />

@@ -1,6 +1,6 @@
 'use client';
 
-import LocaleLink from '@/components/override/locale-link';
+import Link from '@/components/override/locale-link';
 import { Box } from '@/components/ui';
 import Image from 'next/image';
 import React from 'react';
@@ -12,7 +12,7 @@ import Logo from '@/assets/images/logo.png';
 const Header: React.FunctionComponent = () => {
 	return (
 		<Box as='header' className='mx-auto flex max-h-[60px] max-w-7xl items-center justify-between p-3'>
-			<LocaleLink href='/'>
+			<Link href='/'>
 				<Image
 					src={Logo}
 					width={128}
@@ -20,7 +20,7 @@ const Header: React.FunctionComponent = () => {
 					className='w-full max-w-[8rem] object-contain object-center'
 					alt='logo'
 				/>
-			</LocaleLink>
+			</Link>
 			<Box className='flex items-center gap-6 sm:flex-row-reverse sm:gap-3'>
 				<NavLink />
 				<SlideOver />

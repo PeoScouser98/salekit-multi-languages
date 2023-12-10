@@ -1,12 +1,13 @@
-import { LOCALES } from "@/constants/enums"
-import createMiddleware from "next-intl/middleware"
+import { LOCALES, LOCALE_PREFIX } from '@/constants/enums';
+import createMiddleware from 'next-intl/middleware';
 
 export default createMiddleware({
-  locales: LOCALES,
-  defaultLocale: "vi",
-})
+	locales: LOCALES,
+	localePrefix: LOCALE_PREFIX,
+	defaultLocale: LOCALES[0]
+});
 
 export const config = {
-  // * Match only internationalized pathnames
-  matcher: ["/", "/(vi|en)/:path*"],
-}
+	// * Match only internationalized pathnames
+	matcher: ['/', '/(vi|en)/:path*']
+};

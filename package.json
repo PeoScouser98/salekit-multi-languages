@@ -1,5 +1,5 @@
 {
-	"name": "test",
+	"name": "salekit",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
@@ -7,7 +7,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"prettier:fix": "prettier --write src"
+		"prettier:fix": "prettier --write src/**/*.ts|*.tsx"
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.17",
@@ -19,6 +19,7 @@
 		"next-intl": "^3.3.1",
 		"react": "^18",
 		"react-dom": "^18",
+		"sharp": "^0.33.0",
 		"tailwind-merge": "^2.1.0",
 		"tailwind-scrollbar": "^3.0.5",
 		"tailwind-styled-components": "^2.2.0"

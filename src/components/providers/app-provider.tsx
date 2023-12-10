@@ -17,7 +17,7 @@ const AppProvider: React.FC<React.PropsWithChildren> = (props) => {
 	})();
 
 	const Providers = buildProviders([
-		[NextIntlClientProvider, { locale: locale, messages: language }]
+		[NextIntlClientProvider, { locale: locale, messages: language, timeZone: 'Asia/Ho_Chi_Minh', now: new Date() }]
 		// ... other providers (Redux provider, React query client provider, Theme prodvider...)
 	]);
 

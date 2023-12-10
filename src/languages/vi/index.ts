@@ -1,7 +1,9 @@
 import common_ns from './ns-common';
 import landing_ns from './ns-landing';
 
-export default {
+const Vietnamese = {
 	common_ns,
 	landing_ns
 };
+
+export default Vietnamese;

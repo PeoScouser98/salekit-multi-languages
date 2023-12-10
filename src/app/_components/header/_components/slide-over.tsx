@@ -1,6 +1,6 @@
 'use client';
 
-import LocaleLink from '@/components/override/locale-link';
+import Link from '@/components/override/locale-link';
 import { Button } from '@/components/ui';
 import { Dialog, Menu, Transition } from '@headlessui/react';
 import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -19,7 +19,7 @@ export default function SlideOver() {
 				shape='circle'
 				size='md'
 				icon={Bars4Icon}
-				className='sm:inline-flex md:inline-flex hidden'
+				className='hidden sm:inline-flex md:inline-flex'
 				onClick={() => setOpen(!open)}
 			/>
 			<Transition.Root show={open} as={Fragment}>
@@ -66,14 +66,15 @@ export default function SlideOver() {
 												</div>
 											</div>
 											<div className='relative mt-6 flex-1 px-4 sm:px-6'>
-												<Menu as='div' className='flex flex-col gap-3 items-stretch text-xl font-medium'>
+												<Menu as='div' className='flex flex-col items-stretch gap-3 text-xl font-medium'>
 													{navigation.map((item) => (
 														<Menu.Item
-															as={LocaleLink}
+															as={Link}
+															passHref
 															href={item.href}
 															key={item.id}
-															className='px-3 py-2.5 hover:bg-primary hover:text-white ui-active:text-primary rounded-lg inline-flex items-center gap-6'>
-															<item.icon className='w-6 h-6' />
+															className='inline-flex items-center gap-6 rounded-lg px-3 py-2.5 ui-active:text-primary hover:bg-primary hover:text-white'>
+															<item.icon className='h-6 w-6' />
 															{t(item.label)}
 														</Menu.Item>
 													))}

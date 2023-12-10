@@ -1,6 +1,6 @@
 'use client';
 
-import LocaleLink from '@/components/override/locale-link';
+import Link from '@/components/override/locale-link';
 import { Box } from '@/components/ui';
 import { Disclosure, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
@@ -30,9 +30,9 @@ export default function CollapseItem({ data }: { data: TQnAItem }) {
 					<Disclosure.Panel static>
 						<Box className='px-6 py-3'>
 							<p className='mb-6 text-sm'>{t(data.answer)}</p>
-							<LocaleLink href={data.link.href} className='text-sm text-primary hover:underline'>
+							<Link href={data.link.href} className='text-sm text-primary hover:underline'>
 								{t(data.link.text)}
-							</LocaleLink>
+							</Link>
 						</Box>
 					</Disclosure.Panel>
 				</Transition>

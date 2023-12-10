@@ -48,8 +48,10 @@ export default function FeatureSection() {
 					))}
 				</Tab.List>
 				<Tab.Panels>
-					{tabs.map((tab) => (
-						<Tab.Panel className='mx-auto w-full max-w-7xl sm:max-w-full'>{tab.panel}</Tab.Panel>
+					{tabs.map((tab, index) => (
+						<Tab.Panel key={index} className='mx-auto w-full max-w-7xl sm:max-w-full'>
+							{tab.panel}
+						</Tab.Panel>
 					))}
 				</Tab.Panels>
 			</Tab.Group>

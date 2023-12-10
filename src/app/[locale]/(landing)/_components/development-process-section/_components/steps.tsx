@@ -71,7 +71,7 @@ export default function ProcessSteps() {
 
 					return (
 						<StepItem
-							key={step.href}
+							key={stepIndex}
 							className={cn({ 'pb-10': stepIndex !== steps.length - 1 })}
 							style={{ order: order }}>
 							<HorizontalStepConnector aria-hidden='true' />

@@ -7,7 +7,7 @@ import BannerHomeImage from '@/assets/images/banner-home-image.png';
 import { useTranslations } from 'next-intl';
 import tw from 'tailwind-styled-components';
 import { ArrowRightCircleIcon } from '@heroicons/react/20/solid';
-export default function IntroHeroBanner() {
+export default function IntroSection() {
 	const t = useTranslations();
 
 	return (

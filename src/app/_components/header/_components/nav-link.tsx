@@ -1,4 +1,4 @@
-import LocaleLink from '@/components/override/locale-link';
+import Link from '@/components/override/locale-link';
 import { Box } from '@/components/ui';
 import { useTranslations } from 'next-intl';
 import tw from 'tailwind-styled-components';
@@ -10,7 +10,7 @@ export default function NavLink() {
 	return (
 		<Nav as='nav'>
 			{navigation.map((item) => (
-				<NavLinkItem key={item.id} href={item.href} className=''>
+				<NavLinkItem key={item.id} href={item.href}>
 					{t(item.label)}
 				</NavLinkItem>
 			))}
@@ -20,5 +20,5 @@ export default function NavLink() {
 
 const Nav = tw(Box)`flex items-center space-x-px sm:hidden md:hidden sticky top-0 z-50`;
 const NavLinkItem = tw(
-	LocaleLink
+	Link
 )`px-3 py-1.5 rounded-[4px] hover:bg-primary hover:text-white transition-color duration-200 font-medium`;
